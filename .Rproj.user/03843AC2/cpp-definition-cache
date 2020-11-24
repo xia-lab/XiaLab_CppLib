@@ -1,0 +1,188 @@
+[
+    {
+        "file": "/home/peng/R_package/XiaLabCppLib/src/PCSF.cpp",
+        "file_last_write": 1606238356.0,
+        "definitions": [
+            {
+                "usr": "c:@S@Node",
+                "kind": 2,
+                "parent_name": "",
+                "name": "Node",
+                "file": "/home/peng/R_package/XiaLabCppLib/src/PCSF.cpp",
+                "line": 42,
+                "column": 7
+            },
+            {
+                "usr": "c:@S@Node@F@operator=#&1$@S@Node#",
+                "kind": 7,
+                "parent_name": "Node",
+                "name": "operator=(const Node &)",
+                "file": "/home/peng/R_package/XiaLabCppLib/src/PCSF.cpp",
+                "line": 53,
+                "column": 10
+            },
+            {
+                "usr": "c:@S@VertexProperties",
+                "kind": 3,
+                "parent_name": "",
+                "name": "VertexProperties",
+                "file": "/home/peng/R_package/XiaLabCppLib/src/PCSF.cpp",
+                "line": 62,
+                "column": 8
+            },
+            {
+                "usr": "c:PCSF.cpp@T@GraphBase",
+                "kind": 8,
+                "parent_name": "",
+                "name": "GraphBase",
+                "file": "/home/peng/R_package/XiaLabCppLib/src/PCSF.cpp",
+                "line": 70,
+                "column": 104
+            },
+            {
+                "usr": "c:PCSF.cpp@T@vertex_iterator",
+                "kind": 8,
+                "parent_name": "",
+                "name": "vertex_iterator",
+                "file": "/home/peng/R_package/XiaLabCppLib/src/PCSF.cpp",
+                "line": 71,
+                "column": 50
+            },
+            {
+                "usr": "c:PCSF.cpp@T@edge_iterator",
+                "kind": 8,
+                "parent_name": "",
+                "name": "edge_iterator",
+                "file": "/home/peng/R_package/XiaLabCppLib/src/PCSF.cpp",
+                "line": 72,
+                "column": 52
+            },
+            {
+                "usr": "c:PCSF.cpp@T@graph_edge_iterator",
+                "kind": 8,
+                "parent_name": "",
+                "name": "graph_edge_iterator",
+                "file": "/home/peng/R_package/XiaLabCppLib/src/PCSF.cpp",
+                "line": 73,
+                "column": 48
+            },
+            {
+                "usr": "c:PCSF.cpp@T@Edge",
+                "kind": 8,
+                "parent_name": "",
+                "name": "Edge",
+                "file": "/home/peng/R_package/XiaLabCppLib/src/PCSF.cpp",
+                "line": 74,
+                "column": 50
+            },
+            {
+                "usr": "c:PCSF.cpp@T@Vertex",
+                "kind": 8,
+                "parent_name": "",
+                "name": "Vertex",
+                "file": "/home/peng/R_package/XiaLabCppLib/src/PCSF.cpp",
+                "line": 75,
+                "column": 52
+            },
+            {
+                "usr": "c:@F@clear_variables#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "clear_variables",
+                "file": "/home/peng/R_package/XiaLabCppLib/src/PCSF.cpp",
+                "line": 89,
+                "column": 6
+            },
+            {
+                "usr": "c:@F@idx_g#&1$@N@Rcpp@S@String#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "idx_g(const Rcpp::String &)",
+                "file": "/home/peng/R_package/XiaLabCppLib/src/PCSF.cpp",
+                "line": 100,
+                "column": 5
+            },
+            {
+                "usr": "c:@F@idx_G#&1$@N@std@N@__cxx11@S@basic_string>#C#$@N@std@S@char_traits>#C#$@N@std@S@allocator>#C#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "idx_G(const std::string &)",
+                "file": "/home/peng/R_package/XiaLabCppLib/src/PCSF.cpp",
+                "line": 107,
+                "column": 5
+            },
+            {
+                "usr": "c:@F@idx_G_pruned#&1$@N@std@N@__cxx11@S@basic_string>#C#$@N@std@S@char_traits>#C#$@N@std@S@allocator>#C#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "idx_G_pruned(const std::string &)",
+                "file": "/home/peng/R_package/XiaLabCppLib/src/PCSF.cpp",
+                "line": 114,
+                "column": 5
+            },
+            {
+                "usr": "c:@F@read_input_graph#$@N@Rcpp@S@Vector>#VI16#@N@Rcpp@ST>1#T@PreserveStorage#S0_#$@N@Rcpp@S@Vector>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#S0_#S1_#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "read_input_graph(Rcpp::CharacterVector, Rcpp::CharacterVector, Rcpp::NumericVector, Rcpp::CharacterVector, Rcpp::NumericVector)",
+                "file": "/home/peng/R_package/XiaLabCppLib/src/PCSF.cpp",
+                "line": 124,
+                "column": 6
+            },
+            {
+                "usr": "c:@F@clear#&$@N@std@S@vector>#$@S@Node#$@N@std@S@allocator>#S2_#&I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "clear(vector<Node> &, int &)",
+                "file": "/home/peng/R_package/XiaLabCppLib/src/PCSF.cpp",
+                "line": 154,
+                "column": 6
+            },
+            {
+                "usr": "c:@F@process_leafs#&$@N@std@S@vector>#$@S@Node#$@N@std@S@allocator>#S2_#&I#&$@N@boost@N@detail@S@edge_desc_impl>#$@N@boost@S@undirected_tag#l#&b#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "process_leafs(vector<Node> &, int &, Edge &, bool &)",
+                "file": "/home/peng/R_package/XiaLabCppLib/src/PCSF.cpp",
+                "line": 163,
+                "column": 6
+            },
+            {
+                "usr": "c:@F@price_collect#&$@N@std@S@vector>#$@S@Node#$@N@std@S@allocator>#S2_#&I#&$@N@boost@N@detail@S@edge_desc_impl>#$@N@boost@S@undirected_tag#l#&b#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "price_collect(vector<Node> &, int &, Edge &, bool &)",
+                "file": "/home/peng/R_package/XiaLabCppLib/src/PCSF.cpp",
+                "line": 178,
+                "column": 6
+            },
+            {
+                "usr": "c:@F@constructG#&$@N@std@S@vector>#I#$@N@std@S@allocator>#I#&I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "constructG(vector<int> &, int &)",
+                "file": "/home/peng/R_package/XiaLabCppLib/src/PCSF.cpp",
+                "line": 194,
+                "column": 18
+            },
+            {
+                "usr": "c:@F@cut#&I#&$@N@std@S@vector>#l#$@N@std@S@allocator>#l#&$@N@std@S@vector>#$@N@std@N@__cxx11@S@basic_string>#C#$@N@std@S@char_traits>#C#$@N@std@S@allocator>#C#$@N@std@S@allocator>#S6_#S4_#&$@N@std@S@vector>#d#$@N@std@S@allocator>#d#&$@N@std@S@map>#S6_#d#$@N@std@S@less>#S6_#$@N@std@S@allocator>#$@N@std@S@pair>#1S6_#d#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "cut(int &, vector<Vertex> &, vector<std::string> &, vector<std::string> &, vector<double> &, map<std::string, double> &)",
+                "file": "/home/peng/R_package/XiaLabCppLib/src/PCSF.cpp",
+                "line": 430,
+                "column": 8
+            },
+            {
+                "usr": "c:@F@call_sr#$@N@Rcpp@S@Vector>#VI16#@N@Rcpp@ST>1#T@PreserveStorage#S0_#$@N@Rcpp@S@Vector>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#S0_#S1_#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "call_sr(Rcpp::CharacterVector, Rcpp::CharacterVector, Rcpp::NumericVector, Rcpp::CharacterVector, Rcpp::NumericVector)",
+                "file": "/home/peng/R_package/XiaLabCppLib/src/PCSF.cpp",
+                "line": 573,
+                "column": 6
+            }
+        ]
+    }
+]
