@@ -21,8 +21,11 @@ BEGIN_RCPP
 END_RCPP
 }
 
+RcppExport SEXP rowcolttests(SEXP, SEXP, SEXP, SEXP, SEXP);
+
 static const R_CallMethodDef CallEntries[] = {
     {"_XiaLabCppLib_call_sr", (DL_FUNC) &_XiaLabCppLib_call_sr, 5},
+    {"rowcolttests", (DL_FUNC) &rowcolttests, 5},
     {NULL, NULL, 0}
 };
 
