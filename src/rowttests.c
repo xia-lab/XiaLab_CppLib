@@ -1,11 +1,12 @@
 /*
  * Copyright W. Huber 2005
  */
-
+ 
 #include <R.h>
 #include <Rinternals.h>
 #include <R_ext/Rdynload.h>
 #include <R_ext/Utils.h> 
+
 #include <stdlib.h>
 
 /* #define DEBUG */
@@ -16,7 +17,6 @@ char errmsg[256];
   which=0:  t-test by row
   which=1:  t-test by column
 -----------------------------------------------------------------*/
-
 void rowcolttests_c(double *x, int *fac, int nr, int nc, int no, int nt, 
                     int which, int nrgrp, int na_rm,
                     double *statistic, double *dm, double *df) {
@@ -132,8 +132,6 @@ void rowcolttests_c(double *x, int *fac, int nr, int nc, int no, int nt,
    which: int. For 0, do the tests along the rows, for 1, 
           along the columns 
 ------------------------------------------------------------------*/
-
-
 SEXP rowcolttests(SEXP _x, SEXP _fac, SEXP _nrgrp, SEXP _which, SEXP _na_rm)
 {
   SEXP dimx;  /* dimensions of x */
