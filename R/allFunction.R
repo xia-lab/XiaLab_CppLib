@@ -25,18 +25,18 @@ modwtR <- function(Cyvals, Cnumin, Cistart, Cilower, Ciupper){
 
 #' @export
 DescendMinR <- function(Cyvals, Cnumin, Cistart, Cilower, Ciupper){
-  .C("DescendMinR", 
+  .C("DescendMin", 
      Cyvals, Cnumin, Cistart, Cilower, Ciupper)
 }
 
 #' @export
 FindEqualGreaterMR <- function(Cin, Csize, Cvalues, Cvalsize, Cindex){
-  .C("FindEqualGreaterMR", 
+  .C("FindEqualGreaterM", 
      Cin, Csize, Cvalues, Cvalsize, Cindex)
 }
 
 #' @export
 RectUniqueR <- function( Cm, Corder,  Cnrow, Cncol, Cxdiff,  Cydiff, Ckeep){
-  .C("RectUniqueR",
+  .C("RectUnique",
   Cm, Corder,  Cnrow, Cncol, Cxdiff,  Cydiff, Ckeep)
 }
