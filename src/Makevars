@@ -2,7 +2,7 @@ BATCHOBJECTS=decorana.o Internal_utils_batch.o
 
 INITOBJECT=init.o
 
-STATISOBJECT=rowttests.o util.o
+STATISOBJECT=rowttests.o util.o melt.o
 
 PCSFOBJECT=PCSF.o RcppExports.o
 

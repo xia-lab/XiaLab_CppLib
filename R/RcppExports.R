@@ -18,3 +18,7 @@ call_sr <- function(from, to, cost, node_names, node_prizes) {
     .Call(`_XiaLabCppLib_call_sr`, from, to, cost, node_names, node_prizes)
 }
 
+melt_dataframe <- function(data, id_ind, measure_ind, variable_name, value_name, measure_attributes, factorsAsStrings, valueAsFactor) {
+    .Call(`_XiaLabCppLib_melt_dataframe`, data, id_ind, measure_ind, variable_name, value_name, measure_attributes, factorsAsStrings, valueAsFactor)
+}
+

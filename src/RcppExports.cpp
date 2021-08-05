@@ -5,6 +5,11 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // call_sr
 List call_sr(CharacterVector from, CharacterVector to, NumericVector cost, CharacterVector node_names, NumericVector node_prizes);
 RcppExport SEXP _XiaLabCppLib_call_sr(SEXP fromSEXP, SEXP toSEXP, SEXP costSEXP, SEXP node_namesSEXP, SEXP node_prizesSEXP) {
@@ -20,6 +25,24 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// melt_dataframe
+List melt_dataframe(const DataFrame& data, const IntegerVector& id_ind, const IntegerVector& measure_ind, String variable_name, String value_name, SEXP measure_attributes, bool factorsAsStrings, bool valueAsFactor);
+RcppExport SEXP _XiaLabCppLib_melt_dataframe(SEXP dataSEXP, SEXP id_indSEXP, SEXP measure_indSEXP, SEXP variable_nameSEXP, SEXP value_nameSEXP, SEXP measure_attributesSEXP, SEXP factorsAsStringsSEXP, SEXP valueAsFactorSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const DataFrame& >::type data(dataSEXP);
+    Rcpp::traits::input_parameter< const IntegerVector& >::type id_ind(id_indSEXP);
+    Rcpp::traits::input_parameter< const IntegerVector& >::type measure_ind(measure_indSEXP);
+    Rcpp::traits::input_parameter< String >::type variable_name(variable_nameSEXP);
+    Rcpp::traits::input_parameter< String >::type value_name(value_nameSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type measure_attributes(measure_attributesSEXP);
+    Rcpp::traits::input_parameter< bool >::type factorsAsStrings(factorsAsStringsSEXP);
+    Rcpp::traits::input_parameter< bool >::type valueAsFactor(valueAsFactorSEXP);
+    rcpp_result_gen = Rcpp::wrap(melt_dataframe(data, id_ind, measure_ind, variable_name, value_name, measure_attributes, factorsAsStrings, valueAsFactor));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 RcppExport void DescendMin(void *, void *, void *, void *, void *);
 RcppExport void FindEqualGreaterM(void *, void *, void *, void *, void *);
@@ -31,6 +54,7 @@ RcppExport SEXP rowcolttests(SEXP, SEXP, SEXP, SEXP, SEXP);
 
 static const R_CallMethodDef CallEntries[] = {
     {"_XiaLabCppLib_call_sr", (DL_FUNC) &_XiaLabCppLib_call_sr, 5},
+    {"_XiaLabCppLib_melt_dataframe", (DL_FUNC) &_XiaLabCppLib_melt_dataframe, 8},
     {"DescendMin",        (DL_FUNC) &DescendMin,        5},
     {"FindEqualGreaterM", (DL_FUNC) &FindEqualGreaterM, 5},
     {"imodwt",            (DL_FUNC) &imodwt,            8},
