@@ -14,6 +14,8 @@ extern void RectUnique(void *, void *, void *, void *, void *, void *, void *);
 /* .Call calls */
 extern SEXP do_decorana(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
 extern SEXP rowcolttests(SEXP, SEXP, SEXP, SEXP, SEXP);
+extern SEXP _XiaLabCppLib_call_sr(SEXP, SEXP, SEXP, SEXP, SEXP);
+extern SEXP _XiaLabCppLib_melt_dataframe(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
 
 static const R_CMethodDef CEntries[] = {
   {"imodwt",         (DL_FUNC) &imodwt,          8},
@@ -25,17 +27,15 @@ static const R_CMethodDef CEntries[] = {
 };
 
 static const R_CallMethodDef CallEntries[] = {
-    {"do_decorana",  (DL_FUNC) &do_decorana,  7},
-    {"rowcolttests",          (DL_FUNC) &rowcolttests,           5},
+    {"do_decorana",              (DL_FUNC) &do_decorana,              7},
+    {"rowcolttests",             (DL_FUNC) &rowcolttests,             5},
+    {"_XiaLabCppLib_call_sr",    (DL_FUNC) &_XiaLabCppLib_call_sr,    5},
+    {"_XiaLabCppLib_melt_dataframe", (DL_FUNC) &_XiaLabCppLib_melt_dataframe, 8},
     {NULL, NULL, 0}
 };
 
- void R_init_MetaboAnalystR(DllInfo *dll)
- {
-   R_registerRoutines(dll, CEntries, CallEntries,NULL,NULL);
-   R_useDynamicSymbols(dll, FALSE);
- }
-
-//void R_init_MetaboAnalystR(DllInfo *info) {
-//  R_RegisterCCallable("MetaboAnalystR", "add",  (DL_FUNC) &CEntries);
-//}
+void R_init_XiaLabCppLib(DllInfo *dll)
+{
+  R_registerRoutines(dll, CEntries, CallEntries, NULL, NULL);
+  R_useDynamicSymbols(dll, TRUE);
+}

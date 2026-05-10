@@ -1,3 +1,6 @@
+# Makevars.win for Windows builds (MSVC/MinGW)
+# This file is used instead of Makevars on Windows
+
 # C++ sources from Rcpp
 RCPP_SOURCES = decorana.cpp PCSF.cpp melt.cpp RcppExports.cpp
 
@@ -9,15 +12,13 @@ RCPP_OBJECTS = $(RCPP_SOURCES:.cpp=.o)
 C_OBJECTS = $(C_SOURCES:.c=.o)
 OBJECTS = $(RCPP_OBJECTS) $(C_OBJECTS)
 
-# Compiler flags
+# Compiler flags for Windows
 PKG_CXXFLAGS = $(RCPP_CXXFLAGS)
 PKG_CFLAGS = -std=c99
 PKG_LIBS = $(RCPP_LDFLAGS)
 
-# Set C++ standard if not already set
-ifndef CXXSTD
+# Set C++ standard
 CXXSTD = CXX11
-endif
 
 all: $(SHLIB)
 

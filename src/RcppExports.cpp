@@ -43,29 +43,3 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-
-RcppExport void DescendMin(void *, void *, void *, void *, void *);
-RcppExport void FindEqualGreaterM(void *, void *, void *, void *, void *);
-RcppExport void imodwt(void *, void *, void *, void *, void *, void *, void *, void *);
-RcppExport void modwt(void *, void *, void *, void *, void *);
-RcppExport void RectUnique(void *, void *, void *, void *, void *, void *, void *);
-RcppExport SEXP do_decorana(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
-RcppExport SEXP rowcolttests(SEXP, SEXP, SEXP, SEXP, SEXP);
-
-static const R_CallMethodDef CallEntries[] = {
-    {"_XiaLabCppLib_call_sr", (DL_FUNC) &_XiaLabCppLib_call_sr, 5},
-    {"_XiaLabCppLib_melt_dataframe", (DL_FUNC) &_XiaLabCppLib_melt_dataframe, 8},
-    {"DescendMin",        (DL_FUNC) &DescendMin,        5},
-    {"FindEqualGreaterM", (DL_FUNC) &FindEqualGreaterM, 5},
-    {"imodwt",            (DL_FUNC) &imodwt,            8},
-    {"modwt",             (DL_FUNC) &modwt,             5},
-    {"RectUnique",        (DL_FUNC) &RectUnique,        7},
-    {"do_decorana",  (DL_FUNC) &do_decorana,  7},
-    {"rowcolttests", (DL_FUNC) &rowcolttests, 5},
-    {NULL, NULL, 0}
-};
-
-RcppExport void R_init_XiaLabCppLib(DllInfo *dll) {
-    R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
-    R_useDynamicSymbols(dll, FALSE);
-}
